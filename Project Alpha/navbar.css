@@ -1,0 +1,31 @@
+.nav-2{background-color: #041E42;}
+.nav-text{color: #F1F1F1;padding: 5px;margin: 3px;}
+.topnav-right {float: right;}
+.border{border-radius: 20px;border-top-right-radius:20px ;height: 40px;}
+.nav-btn:hover{color: lightcoral;}
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  margin: 20px;
+  font-size: 1.2rem;
+}
+.border-bottom {
+  border-bottom: 1px solid #DEE2E6 !important;
+}
+#coll-logo{width: 210px;height: 120px;}
+
+
+/**Media query *//
+@media screen and (max-width: 700px){
+ ul li{width: 45%;
+   }  
+   button{
+     width: 45%;
+   }
+}
+@media screen and (max-width: 500px){
+ ul li{width: 92%;
+  }  
+  button{
+    width: 92;
+  }
+}

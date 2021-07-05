@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/all.min.css" type="text/css">
+    <title>Payment confirmation </title>
+    <style type="text/css">
+        .step_progressbar {
+            width: 90;
+            display: block;
+            margin: 10px auto;
+            background-color: white;
+        }
+
+        ul {
+            display: block;
+            list-style: none;
+            align-items: center;
+            justify-content: space-around;
+            counter-reset: step;
+
+        }
+
+        li {
+            display: inline-block;
+            position: relative;
+            width: 15%;
+            text-align: center;
+            margin-bottom: 15px 0;
+        }
+
+        li::before {
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: white;
+            border: 2px solid green;
+            line-height: 24px;
+            text-align: center;
+            content: counter(step);
+            counter-increment: step;
+            margin: 18px auto;
+            position: relative;
+            z-index: 2;
+            font-size: 15px;
+        }
+
+        li.active {
+            color: green;
+            font-weight: bold;
+        }
+
+        li:after {
+            content: "";
+            width: 100%;
+            height: 3px;
+            background-color: cadetblue;
+            position: absolute;
+            top: 35px;
+            left: -45%;
+            z-index: 1;
+        }
+
+        li:first-child:after {
+            content: none;
+        }
+
+        li.active+li::after {
+            background-color: green;
+        }
+
+        li.active::before {
+            background-color: green;
+            color: white;
+        }
+
+        .process {
+            font-weight: bold;
+            opacity: 0.7;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--step progress bar start-->
+    <div class="step_progressbar text-center">
+        <ul>
+            <li class="active">Select <i class="far fa-hand-pointer"></i> Item </li>
+            <li class="active">Add To <i class="fas fa-cart-plus"></i> Cart</li>
+            <li class="active">Fill <i class="fas fa-edit"></i> Details</li>
+            <li class="active">Make <i class="fas fa-rupee-sign"></i> Payment</li>
+            <li class="process text-secondary">Order <i class="fas fa-luggage-cart"></i> Placed</li>
+        </ul>
+    </div>
+    <!--step progress bar start-->
+    <!--Payment confirmation part start-->
+    <div class="container text-center bg-light">
+        <div><img src="images/correct.jpg" alt="" width="150px" style="border-radius: 200px;">
+        </div>
+        <div class="text-success">
+            <h1>Thank you for your payment!</h1>
+        </div>
+        <div>
+            <p>A receipt for this transaction has been sent via email for your records.</p>
+        </div>
+        <div><a href="#" class="nav-link"> <img src="images/printer.jpg" alt="" width="40px" height="40px"
+                    style="border-radius:100px; border:1px solid blue;"> Click here to print a receipt</a></div>
+        <div>
+            <h5>Total Payment Amount</h5>
+        </div>
+        <div class="text-secondary">
+            <h2> <i class="fas fa-rupee-sign"></i> 56200.00</h2>
+        </div>
+        <div>
+            <h5>Payment Message</h5>
+        </div>
+        <div>
+            <p>PAYMENT PROCESSED 56748**</p>
+        </div>
+        <div>
+            <h5>Payment Method</h5>
+        </div>
+        <div class="text-muted">
+            <p>EFT(Check)</p>
+        </div>
+        <div class="text-muted mr-0" style="margin-top: -15px;">
+            <p>XXXX0000</p>
+        </div>
+        <div><button type="button" class="btn btn-primary" style="border-radius: 10px;"><a href="checkout_address.html" target="blank" style="color: white; text-decoration: none;">Return & Shop More</a></button>
+        </div>
+    </div>
+    <!--Payment confirmation part start-->
+</body>
+
+</html>
